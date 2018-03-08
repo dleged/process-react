@@ -1,16 +1,17 @@
 import PropTypes from 'prop-types';
 import React,{Component} from 'react';
-import menuData from '../common/menuData';
+import {sliderData,headerData} from '../common/menuData';
 import DocumentTitle from 'react-document-title';
-import { enquireScreen } from 'enquire-js';
 import SliderMenu from '../components/sliderMenu';
+import Header from '../components/header';
+import RouterTemp from '../routers'
 import {
     BrowserRouter as Router,
     Route,
  } from 'react-router-dom';
 import './layout.less';
 
-
+console.log(RouterTemp);
 class BasicLayout extends Component {
 	getChildContext() {
 		const { location, routerData } = this.props;
@@ -36,13 +37,19 @@ class BasicLayout extends Component {
 	// })
 	render(){
 		let layout = (
-			<div class="ant-layout">
-				<Router>
-					<div className="left-layout">
-						<SliderMenu className="" data={menuData} />
-					</div>
-				</Router>
-			</div>
+			<Router path="/">
+				<div class="ant-layout ant-layout-has-sider">
+						<div className="left-layout">
+							<SliderMenu className="" data={sliderData} />
+						</div>
+						<div className="ant-layout">
+							<Header name="全流程业务运营管理平台" data={headerData} />
+							<div className="ant-layout-content" style={{margin: "24px 24px 0px", height: "100%"}}>
+								<RouterTemp />
+							</div>
+						</div>
+				</div>
+			</Router>
 		)
 		return (
 			<DocumentTitle title={this.getPageTitle()}>

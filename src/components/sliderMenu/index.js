@@ -73,7 +73,7 @@ class ItemMenu extends Component{
 				{
 					data.map((item,i) => (
 						<li key={i} onClick={this.selectItem} className="ant-menu-item">
-							<Link to={`#/${subPath}/${item.path}`}><span>{item.name}</span></Link>
+							<Link to={`/${subPath}/${item.path}`}><span>{item.name}</span></Link>
 						</li>
 					))
 				}
@@ -90,7 +90,7 @@ class SliderMenu extends Component {
 	render(){
 		return (
 			<div className="ant-layout-has-sider" >
-				<Log name="全流程" />
+				<Log name="全流程业务运营管理平台" />
 				<ul class="ant-menu ant-menu-dark ant-menu-root ant-menu-inline" role="menu" tabIndex="0">
 					<SubMenu data={this.props.data} />
 				</ul>

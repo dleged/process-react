@@ -1,10 +1,10 @@
-const menuData = [{
-  name: 'dashboard',
-  icon: 'dashboard',
-  path: 'dashboard',
+const sliderData = [{
+  name: 'home',
+  icon: 'home',
+  path: 'home',
   children: [{
-    name: '分析页',
-    path: 'analysis',
+    name: '面板',
+    path: 'dashboard',
   }, {
     name: '监控页',
     path: 'monitor',
@@ -101,4 +101,37 @@ const menuData = [{
 }];
 
 
-export default menuData;
+const headerData = [{
+		name: '首页',
+	    path: 'dashboard'
+	},
+	{
+		name: 'CDN',
+	    href: 'www.baidu.com'
+	},
+	{
+		name: '集团',
+	    href: 'www.baidu.com'
+	},
+	{
+		name: '互联互通',
+	    href: 'www.baidu.com'
+	},
+	{
+		name: '云链路',
+	    path: 'yunlianlu'
+	},
+	{
+		name: '第三方',
+	    href: 'www.baidu.com'
+	},
+	{
+		name: 'idc',
+	    href: 'www.baidu.com'
+	}
+]
+
+export {
+	sliderData,
+	headerData
+}
