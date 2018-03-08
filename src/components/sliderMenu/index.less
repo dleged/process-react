@@ -1,0 +1,35 @@
+@ease-in-out-circ: cubic-bezier(.78, .14, .15, .86);
+.sider {
+  min-height: 100vh;
+  box-shadow: 2px 0 6px rgba(0, 21, 41, .35);
+  position: relative;
+  z-index: 10;
+}
+
+.icon {
+  width: 14px;
+  margin-right: 10px;
+}
+.ant-layout-has-sider{
+    min-height: 100vh;
+    background: #001529;
+}
+.ant-menu-submenu-title{
+	text-align: left;
+}
+
+.ant-layout-has-sider .ant-menu-item{
+	text-align: left;
+	padding-left: 48px;
+}
+:global {
+  .drawer .drawer-content {
+    background: #001529;
+  }
+}
+.ant-menu-submenu-open{
+	.ant-menu-submenu{
+		display: block;
+	}
+
+}
