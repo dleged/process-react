@@ -17,7 +17,7 @@ class Pie extends Component {
 
 		// 数据源
 		return (
-			<Chart height={height} data={data} padding={[ 0, 110, 20, 0]} forceFit>
+			<Chart height={height} data={data} padding={[0, 110, 20, 0]} forceFit>
 			   <Coord type='polar' innerRadius={0.1} />
 			   <Tooltip />
 			   <Legend
