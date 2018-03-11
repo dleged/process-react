@@ -96,5 +96,8 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "devDependencies": {
+    "ant-design-pro": "^1.1.0"
   }
 }

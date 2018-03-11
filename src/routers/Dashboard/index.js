@@ -66,28 +66,28 @@ class Dashboard extends Component {
 						<Card title="出口利用率">
 							<Pie height={295} data={ [{
 								name: '外省移动',
-								value:  100
+								value:  120
 							},{
 								name: '互联互通',
-								value:  200
+								value:  130
 							},{
 								name: '云链路',
-								value:  300
+								value:  186
 							},{
 								name: '第三方',
-								value:  400
+								value:  129
 							},{
 								name: 'IDC',
-								value:  500
+								value:  110
 							},{
 								name: 'CDN',
-								value:  500
+								value:  170
 							},{
 								name: '本网率',
-								value:  500
+								value:  134
 							},{
 								name: '本省率',
-								value:  500
+								value:  110
 							}] } />
 						</Card>
 					</Col>

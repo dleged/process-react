@@ -19,7 +19,7 @@ class Bar extends Component {
 				<Axis name="name" />
 				<Axis name="value" />
 	 	  		<Tooltip />
-	      		<Geom type="interval" position="name*value" color={color} />
+	      		<Geom color="name" type="interval" position="name*value" color={color} />
 		    </Chart>
 		)
 	}
