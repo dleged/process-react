@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Chart, Axis, Tooltip,Legend, Geom } from 'bizcharts';
 
-
 class Bar extends Component {
 	constructor(props){
 		super(props)

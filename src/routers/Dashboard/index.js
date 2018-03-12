@@ -20,7 +20,7 @@ class Dashboard extends Component {
 		super(props);
 	}
 	render(){
-		const topColResponsiveProps = {
+		const topColResponsiveProps_12 = {
 	      xs: 24,
 	      sm: 12,
 	      md: 12,
@@ -29,11 +29,71 @@ class Dashboard extends Component {
 	      style: { marginBottom: 24 },
 		};
 
+    const topColResponsiveProps_8 = {
+	      xs: 24,
+	      sm: 8,
+	      md: 8,
+	      lg: 8,
+	      xl: 8,
+	      style: { marginBottom: 24 },
+		};
+
+    const topColResponsiveProps_16 = {
+	      xs: 24,
+	      sm: 16,
+	      md: 16,
+	      lg: 16,
+	      xl: 16,
+	      style: { marginBottom: 24 },
+		};
+
+    const topColResponsiveProps_sm_8 = {
+	      xs: 8,
+	      style: { height: '50%' }
+		};
+    //各通道流量占比
+    const eachChannelProps = {
+        title: ['外省移动','云链路','互联互通','第三方','互联互通','IDC'],
+        height: 100,
+        legend: false,
+        data: [{
+          name: '视频',
+          value:  120
+        },{
+          name: '文字',
+          value:  130
+        },{
+          name: '图片',
+          value:  186
+        },{
+          name: '应用',
+          value:  129
+        },{
+          name: '其它',
+          value:  110
+        }]
+    }
+    //通道流量已使用情况
+    const channelCapacityProps =   {
+        title: ['CDN','IDC','外省移动','云链路','第三方','CDN'],
+        innerRadius: 0.6,
+        style: {left: '-20px',position:"relative"},
+        padding: [0,80,0,0],
+        height: 100,
+        data: [{
+          name: '未使用',
+          value:  120
+        },{
+          name: '已使用',
+          value:  310
+        }]
+    }
+
 
 		return(
 			<Fragment>
 				<Row gutter={24}>
-					<Col {...topColResponsiveProps}>
+					<Col {...topColResponsiveProps_12}>
 						<Card title="重要网络资源流向">
 							<Bar height={295} color={'rgba(24, 144, 255, 0.85)'} data={ [{
 								name: '外省移动',
@@ -62,9 +122,9 @@ class Dashboard extends Component {
 							}] } />
 						</Card>
 					</Col>
-					<Col {...topColResponsiveProps}>
+					<Col {...topColResponsiveProps_12}>
 						<Card title="出口利用率">
-							<Pie height={295} data={ [{
+							<Pie height={'295'} legend={false} label={true} data={ [{
 								name: '外省移动',
 								value:  120
 							},{
@@ -92,6 +152,30 @@ class Dashboard extends Component {
 						</Card>
 					</Col>
 				</Row>
+        <Row gutter={24}>
+          <Col {...topColResponsiveProps_8}>
+            <Card title="各通道流量占比">
+              {
+                eachChannelProps.title.map((item,index) => (
+                  <Col {...topColResponsiveProps_sm_8}>
+                    <Pie {...eachChannelProps} title={item} />
+                  </Col>
+                ))
+              }
+            </Card>
+          </Col>
+          <Col {...topColResponsiveProps_16}>
+            <Card title="通道流量已使用情况">
+              {
+                channelCapacityProps.title.map((item,index) => (
+                  <Col {...topColResponsiveProps_sm_8}>
+                    <Pie {...channelCapacityProps} title={item} />
+                  </Col>
+                ))
+              }
+            </Card>
+          </Col>
+        </Row>
 			</Fragment>
 		)
 	}
