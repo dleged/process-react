@@ -23,7 +23,7 @@ class Pie extends Component {
 			value = 0
 		} = this.props;
 		const defaultColors = color;
-
+    
 		const dv = new DataView();
     dv.source(data).transform({
     type: 'percent',

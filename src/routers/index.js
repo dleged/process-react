@@ -4,9 +4,9 @@ import {
 } from './routerTemp';
 
 import {
-    Switch,
-    Route,
- } from 'react-router-dom';
+	Switch,
+	Route,
+} from 'react-router-dom';
 class RouterTemp extends Component {
 	constructor(props){
 		super(props);
