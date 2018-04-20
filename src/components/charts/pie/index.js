@@ -23,7 +23,7 @@ class Pie extends Component {
 			value = 0
 		} = this.props;
 		const defaultColors = color;
-    
+
 		const dv = new DataView();
     dv.source(data).transform({
     type: 'percent',
@@ -54,11 +54,11 @@ class Pie extends Component {
               (value, color, checked, index) => {
                 const obj = dv.rows[index];
                 checked = checked ? 'checked' : 'unChecked';
-                return '<tr class="g2-legend-list-item item-' + index + ' ' + checked +
+                return '<tr classNameNameName="g2-legend-list-item item-' + index + ' ' + checked +
                   '" data-value="' + value + '" data-color=' + color +
                   ' style="cursor: pointer;font-size: 14px;">' +
-                  '<td width=150 style="border: none;padding:0;"><i class="g2-legend-marker" style="width:10px;height:10px;display:inline-block;margin-right:10px;background-color:' + color + ';"></i>' +
-                  '<span class="g2-legend-text">' + value + '</span></td>' +
+                  '<td width=150 style="border: none;padding:0;"><i classNameName="g2-legend-marker" style="width:10px;height:10px;display:inline-block;margin-right:10px;background-color:' + color + ';"></i>' +
+                  '<span classNameName="g2-legend-text">' + value + '</span></td>' +
                   '<td style="text-align: right;border: none;padding:0;">' + (obj.percent*100).toFixed(1) + '%'; + '</td>' +
                   '</tr>';
               }
